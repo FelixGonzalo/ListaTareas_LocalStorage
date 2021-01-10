@@ -68,9 +68,9 @@ const agregarTarea = (descripcion) => {
 
 const listarTareas = () => {
   lista_tareas.innerHTML = ''
-  let datos = getArregloTareas().reverse()
+  let datos = getArregloTareas()
   if (datos != null) {
-    for (const tarea of datos) {
+    for (const tarea of datos.reverse()) {
       lista_tareas.innerHTML += `
         <li id="${tarea.id}">
             <input type="text" class="input-tarea" value="${tarea.descripcion}">  
